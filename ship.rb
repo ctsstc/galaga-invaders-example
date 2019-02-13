@@ -22,16 +22,16 @@ class Ship
     @x += 5
   end
 
+  def draw
+    # Ignore this
+  end
+
   def fire_missile
     @artillery.fire(@x, nose_of_ship)
   end
 
   def move_missiles
     @artillery.move
-  end
-
-  def draw
-    # Ignore this
   end
 
   def draw_missiles
