@@ -32,10 +32,6 @@ class Ship
     @artillery.fire(@x, nose_of_ship)
   end
 
-  def move_missiles
-    @artillery.move
-  end
-
   private
 
   def nose_of_ship

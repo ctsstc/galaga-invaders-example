@@ -16,7 +16,7 @@ class GalagaInvaders
   end
 
   def update
-    @ship.move_missiles
+    @ship.artillery.move
   end
 
   def draw
