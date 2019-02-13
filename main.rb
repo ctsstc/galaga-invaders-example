@@ -12,7 +12,8 @@ class GalagaInvaders
 
   def initialize
     @caption = "Galaga Invaders"
-    @ship = Ship.new(SCREEN_WIDTH / 2, HEIGHT - Ship::HEIGHT)
+    @ship_location = Struct.new('Coordinate', SCREEN_WIDTH / 2, HEIGHT - Ship::HEIGHT)
+    @ship = Ship.new(@ship_location)
   end
 
   def update

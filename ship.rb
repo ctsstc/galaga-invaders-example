@@ -10,18 +10,17 @@ class Ship
   WIDTH = 100
   HEIGHT = 200
 
-  def initialize(x, y)
-    @x = x
-    @y = y
+  def initialize(coordinate)
+    @coordinate = coordinate
     @artillery = Artillery.new
   end
 
   def move_left
-    @x -= 5
+    @coordinate.x -= 5
   end
 
   def move_right
-    @x += 5
+    @coordinate.x += 5
   end
 
   def draw
@@ -39,7 +38,6 @@ class Ship
   end
 
 end
-
 
 =begin
 Reflecting on Principle
