@@ -22,13 +22,13 @@ class Ship
     @x += 5
   end
 
-  def fire
-    @missile_coordinates << [@x, @y - HEIGHT / 2]
+  def fire_missile
+    @missile_coordinates << Missile.new(@x, nose_of_ship)
   end
 
   def move_missiles
     @missile_coordinates.each do |missile|
-      missile[1] -= 10
+      missle.move()
     end
   end
 
@@ -38,8 +38,14 @@ class Ship
 
   def draw_missiles
     @missile_coordinates.each do |missile|
-
+      missile.draw()
     end
+  end
+
+  private
+
+  def nose_of_ship
+    @y - HEIGHT / 2
   end
 
 end
