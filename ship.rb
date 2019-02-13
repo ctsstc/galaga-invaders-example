@@ -11,7 +11,7 @@ class Ship
   def initialize(x, y)
     @x = x
     @y = y
-    @missile_coordinates = []
+    @artillery = Artillery.new
   end
 
   def move_left
@@ -23,13 +23,11 @@ class Ship
   end
 
   def fire_missile
-    @missile_coordinates << Missile.new(@x, nose_of_ship)
+    @artillery.fire(@x, nose_of_ship)
   end
 
   def move_missiles
-    @missile_coordinates.each do |missile|
-      missle.move()
-    end
+    @artillery.move
   end
 
   def draw
@@ -37,9 +35,7 @@ class Ship
   end
 
   def draw_missiles
-    @missile_coordinates.each do |missile|
-      missile.draw()
-    end
+    @artillery.draw
   end
 
   private
