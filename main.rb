@@ -21,7 +21,7 @@ class GalagaInvaders
 
   def draw
     @ship.draw
-    @ship.draw_missiles
+    @ship.artillery.draw
   end
 
   def show

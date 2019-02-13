@@ -5,6 +5,8 @@
 
 class Ship
 
+  attr_reader :artillery
+
   WIDTH = 100
   HEIGHT = 200
 
@@ -32,10 +34,6 @@ class Ship
 
   def move_missiles
     @artillery.move
-  end
-
-  def draw_missiles
-    @artillery.draw
   end
 
   private
