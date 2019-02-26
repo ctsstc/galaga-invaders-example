@@ -8,9 +8,11 @@ class Ship
   DEFAULT_VELOCITY = 5
 
   attr_accessor :location
+  attr_reader :missile_velocity
 
   def initialize(screen_width, screen_height)
     @location = Vector.new(screen_width / 2, screen_height - half_height)
+    @missile_velocity = -10
   end
 
   def muzzle_location

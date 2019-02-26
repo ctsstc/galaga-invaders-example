@@ -6,9 +6,15 @@ class Alien
   HEIGHT = 50
 
   attr_accessor :location
+  attr_reader :missile_velocity
 
   def initialize
     @location = Vector.new(200, 200)
+    @missile_velocity = 10
+  end
+
+  def muzzle_location
+    Vector.new(location.x, bottom_edge)
   end
 
   def move
