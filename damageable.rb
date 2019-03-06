@@ -1,11 +1,6 @@
-class Structure
+module Damageable
 
   DAMAGE = 1
-
-  def initialize(args)
-    @location = args.fetch[:location]
-    @hit_points = args.fetch[:hit_points]
-  end
 
   def hit?(attacker)
     # Returns true or false based on the simple linear distance
