@@ -1,4 +1,5 @@
 module Damageable
+  include Livable
 
   DAMAGE = 1
 
@@ -8,11 +9,11 @@ module Damageable
   end
 
   def damage
-    @hit_points -= DAMAGE
+    hit_points -= DAMAGE
   end
 
   def destroyed?
-    @hit_points <= 0
+    hit_points <= 0
   end
 
 end
